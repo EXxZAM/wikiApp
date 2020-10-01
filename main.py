@@ -6,15 +6,21 @@ import os
 import winsound
 import os.path
 import webbrowser
+
+# Root Configuration
 root = Tk()
 root.resizable(0,0)
 root.geometry('500x600')
 root.title('Wiki Bot')
 color_background='#1F1B24'
 root.configure(bg=color_background)
-menubar = Menu(root) 
+
 
 def change_look():
+    """
+        checks what color the root is already in and changes it!
+        Activates When Theme in Menubar is clicked
+    """
     global color_background
     if color_background == '#1F1B24':
         color_background='#121212'
@@ -31,16 +37,23 @@ def change_look():
         button.configure(bg='#1F1B24',fg='white',padx=10)
         t.configure(bg='#1F1B24',fg='white',padx=5)
     
-    
-
+# Making a Menu Bar and assigning it to Root
+menubar = Menu(root) 
 menubar.add_command(label="Theme", command=change_look)  
-
+root.config(menu=menubar)  
+# Creting a text widget to hold the text from wikipedia
 t = Text(root, height=20, width=40)
+# Creating a scroll bar for the t text widget
 scrollb = Scrollbar(root, command=t.yview)
 scrollb.place()
 t['yscrollcommand'] = scrollb.set
-root.config(menu=menubar)  
+
+
 def open_browser():
+    """
+        Opens the browser with the link of the wikipedia page
+        Activates when Read More On Wikipedia Button is Clicked
+    """
     engine = pyttsx3.init()
     idd ='HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0'
     engine.setProperty('voice', idd)
@@ -53,6 +66,9 @@ def open_browser():
     webbrowser.open(ny2.url)
    
 def speak():
+    """
+        starts engine and turns the text from wikipedia to speech
+    """
     global engine
     global t
     try:
@@ -102,7 +118,9 @@ def speak():
         
 
 def stop():
-    
+    """
+        Stops the voice of winsound
+    """
     idd ='HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0'
     if os.path.isfile('stop.mp3') :
         winsound.PlaySound('stop.mp3', winsound.SND_PURGE)
@@ -116,8 +134,10 @@ def stop():
         winsound.PlaySound('stop.mp3', winsound.SND_PURGE)
     button2.configure(bg='#1F1B24',fg='white',padx=10,state=DISABLED)
         
-t.configure(bg='#1F1B24',fg='white',padx=5)   
 
+
+
+# Widgets
 entry = Entry(root)
 entry.pack(pady=10)
 
@@ -130,7 +150,9 @@ button3.place(relx=0.5,rely=0.95, anchor='c')
 button2.configure(bg='#1F1B24',fg='white',padx=10,state=DISABLED)
 button3.configure(bg='#1F1B24',fg='white',padx=10,state=DISABLED)
 button.configure(bg='#1F1B24',fg='white',padx=10)
+t.configure(bg='#1F1B24',fg='white',padx=5)   
 
+# Making the Main Loop in order to start the program
 root.mainloop()
 
 

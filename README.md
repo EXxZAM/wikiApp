@@ -14,21 +14,20 @@ pip install wikipedia
 pip install winsound
 ```
 
-## Usage
-
-```python
-import foobar
-
-foobar.pluralize('word') # returns 'words'
-foobar.pluralize('goose') # returns 'geese'
-foobar.singularize('phenomena') # returns 'phenomenon'
-```
 
 ## Maker
 This python project is made by Seyed Mahdi Olamaei aka exxzam
+
+
 [instagram.com/mahdi12ad](https://instagram.com/mahdi12ad)
+
+
 [instagram.com/python.mahdi](https://instagram.com/python.mahdi)
+
+
 [t.me/exxzam](https://t.me/exxzam)
+
+
 
 ## Website
 

@@ -18,6 +18,7 @@ os.path
 webbrowser
 <br>
 </b>
+<br>
 and you need to install these packages if you don't already have them =>
 <b>
 <br>

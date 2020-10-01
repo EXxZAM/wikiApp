@@ -1,34 +1,36 @@
-For this project you will need these Package =>
 
-<b>
-<br>
- pyttsx3 
-<br>
-tkinter 
-<br>
-time
-<br>
-wikipedia
-<br>
-os
-<br>
-winsound
-<br>
-os.path
-<br>
-webbrowser
-<br>
-</b>
-<br>
-and you need to install these packages if you don't already have them =>
-<b>
-<br>
+
+# Wiki-App
+
+With Wiki-App you can find articles about anything you want! just enter the name and the app tells you the awnser!
+
+## Needed Packages 
+
+
+```bash
 pip install pyttsx3
-<br>
 pip install tk
-<br>
 pip install wikipedia
-<br>
 pip install winsound
-<br>
-</b>
+```
+
+## Usage
+
+```python
+import foobar
+
+foobar.pluralize('word') # returns 'words'
+foobar.pluralize('goose') # returns 'geese'
+foobar.singularize('phenomena') # returns 'phenomenon'
+```
+
+## Maker
+This python project is made by Seyed Mahdi Olamaei aka exxzam
+[instagram.com/mahdi12ad](https://instagram.com/mahdi12ad)
+[instagram.com/python.mahdi](https://instagram.com/python.mahdi)
+[t.me/exxzam](https://t.me/exxzam)
+
+## Website
+
+[EXxZAM Tutorials](https://exxzamtutorials.ir)
+

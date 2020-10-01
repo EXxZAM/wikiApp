@@ -1,8 +1,9 @@
 For this project you will need these Package =>
+<b>
 <br>
-pyttsx3
+ pyttsx3 
 <br>
-tkinter
+tkinter 
 <br>
 time
 <br>
@@ -16,7 +17,9 @@ os.path
 <br>
 webbrowser
 <br>
+</b>
 and you need to install these packages if you don't already have them =>
+<b>
 <br>
 pip install pyttsx3
 <br>
@@ -26,3 +29,4 @@ pip install wikipedia
 <br>
 pip install winsound
 <br>
+</b>

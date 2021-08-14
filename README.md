@@ -29,7 +29,5 @@ pip install winsound
 
 
 
-## Website
 
-🌐 [EXxZAM Tutorials](https://exxzamtutorials.ir)
 
